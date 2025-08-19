@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://naprawaagd24.pl/sitemap.xml
