@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cennik – Mikroserwis AGD24</title>
+  <meta name="description" content="Cennik usług serwisowych – diagnostyka i naprawa drobnego AGD w Warszawie.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Cennik – Mikroserwis AGD24">
+  <meta property="og:description" content="Cennik usług serwisowych – diagnostyka i naprawa drobnego AGD w Warszawie.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta name="theme-color" content="#0B1D3A">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Mikroserwis AGD24 - strona główna">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 7h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="currentColor" opacity=".15"/>
+          <path d="M7 3h10v4H7zM5 7h14a2 2 0 0 1 2 2v6H3V9a2 2 0 0 1 2-2z" fill="currentColor"/>
+        </svg>
+        <span>Mikroserwis AGD24</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Otwórz menu" onclick="window.toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav" class="site-nav">
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="o-nas.html">O nas</a></li>
+          <li><a href="oferta.html">Oferta</a></li>
+          <li><a href="cennik.html">Cennik</a></li>
+          <li><a href="opinie.html">Opinie</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="content">
+
+<section class="container">
+  <h1>Cennik</h1>
+  <div class="price-table">
+    <div class="price-row"><div class="price-cell h">Usługa</div><div class="price-cell h">Cena</div><div class="price-cell h">Opis</div></div>
+    <div class="price-row"><div class="price-cell">Diagnostyka na miejscu</div><div class="price-cell">100–150 zł</div><div class="price-cell">Dojazd w Warszawie wliczony</div></div>
+    <div class="price-row"><div class="price-cell">Ekspres do kawy</div><div class="price-cell">150–450 zł + części</div><div class="price-cell">Czyszczenie, uszczelki, młynek, elektronika</div></div>
+    <div class="price-row"><div class="price-cell">Blender / robot</div><div class="price-cell">120–300 zł + części</div><div class="price-cell">Łożyska, noże, napęd, przewody</div></div>
+    <div class="price-row"><div class="price-cell">Odkurzacz</div><div class="price-cell">120–350 zł + części</div><div class="price-cell">Silnik, turbina, szczotki</div></div>
+  </div>
+  <p class="muted">*Ceny brutto, ostateczna wycena po diagnozie.</p>
+</section>
+
+  
+<!-- Reservation Modal -->
+<div class="modal-backdrop" id="reserveModal" hidden>
+  <div class="modal">
+    <button class="modal-close" aria-label="Zamknij" data-close-modal>&times;</button>
+    <h2>Rezerwacja wizyty</h2>
+    <form id="reserveForm">
+      <label>Imię i nazwisko
+        <input type="text" name="name" required>
+      </label>
+      <label>Numer telefonu
+        <input type="tel" name="phone" pattern="\+?\d[\d\s-]{7,}" required>
+      </label>
+      <label>Adres e-mail
+        <input type="email" name="email" required>
+      </label>
+      <label>Marka/model urządzenia
+        <input type="text" name="model" required>
+      </label>
+      <label>Opis usterki
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+      <label>Preferowana data wizyty
+        <input type="date" name="date">
+      </label>
+      <label class="consent">
+        <input type="checkbox" name="rodo" required>
+        <span>Zgadzam się na przetwarzanie moich danych w celu kontaktu.</span>
+      </label>
+      <button class="btn btn-primary" type="submit">Wyślij rezerwację</button>
+      <p id="reserveStatus" class="muted" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+</main>
+  <footer class="site-footer">
+    <div class="container grid-3">
+      <section>
+        <h3>Kontakt</h3>
+        <p><strong>Mikroserwis AGD24</strong><br>ul. Prosta 12, 00-001 Warszawa<br>
+        <a href="tel:+48500123456">+48 500 123 456</a><br>
+        <a href="mailto:kontakt@naprawaagd24.pl">kontakt@naprawaagd24.pl</a></p>
+        <p>
+          <a class="btn btn-secondary" href="tel:+48500123456">Zadzwoń</a>
+          <a class="btn" href="https://booksy.com/pl-pl/" target="_blank" rel="noopener">Umów wizytę – Booksy</a>
+        </p>
+      </section>
+      <section>
+        <h3>Szybkie linki</h3>
+        <ul class="list-plain">
+          <li><a href="oferta.html">Usługi</a></li>
+          <li><a href="cennik.html">Cennik</a></li>
+          <li><a href="blog.html">Poradnik</a></li>
+          <li><a href="kontakt.html">Dojazd</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Social media</h3>
+        <p class="socials">
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.6V12h2.9V9.7c0-2.9 1.7-4.5 4.3-4.5 1.2 0 2.5.2 2.5.2v2.7h-1.4c-1.4 0-1.9.9-1.9 1.8V12h3.2l-.5 2.9h-2.7v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM18 6.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+          </a>
+        </p>
+        <p class="meta">© 2025 Mikroserwis AGD24</p>
+      </section>
+    </div>
+  </footer>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
